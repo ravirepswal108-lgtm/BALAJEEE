@@ -182,11 +182,31 @@ let b=prompt("enter the game number");
 while(b!=n){
   b=prompt("enter the game number");
 }*/
-console.time("forloop")
-for (i=0;i>10;i++){
-  console.log(4)
-}
-console.timeEnd("forloop")
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Dropdown aur saare product cards ko select karte hain
+    const selectDropdown = document.querySelector('.search-select');
+    const productCards = document.querySelectorAll('.clean-card');
+
+    // 2. Dropdown change hone par event listener lagate hain
+    selectDropdown.addEventListener('change', function() {
+        const selectedCategory = this.value; // User ne jo select kiya (e.g., "Apparel")
+
+        // 3. Har card ko loop karke check karte hain
+        productCards.forEach(card => {
+            // Card ke andar likhi hui category nikalte hain
+            const cardCategory = card.querySelector('.card-category').innerText.trim();
+
+            // Agar "All" select hai YA category match hoti hai toh dikhao
+            if (selectedCategory === 'All' || cardCategory === selectedCategory) {
+                card.style.display = ''; // Wapas normal dikhayega
+            } else {
+                card.style.display = 'none'; // Chupa dega
+            }
+        });
+    });
+});
+
+
 
 
 
