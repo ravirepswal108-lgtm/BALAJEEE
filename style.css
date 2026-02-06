@@ -83,7 +83,7 @@ body {
 
 .search-icon {
     width: 45px;
-    background-color: #febd69;
+    background-color: #2ca1ee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +92,7 @@ body {
 }
 
 .search-icon:hover {
-    background-color: #f3a847;
+    background-color: #4cafe5;
 }
 
 /* Right Nav Items */
@@ -127,7 +127,7 @@ span.bold-text {
 /* --- 3. SUB-NAV PANEL --- */
 .panel {
     height: 40px;
-    background-color: #232f3e;
+    background-color: #700559;
     display: flex;
     align-items: center;
     color: white;
