@@ -416,3 +416,29 @@ ul a:hover {
         margin-bottom: 0;
     }
 }
+.line-container {
+  width: 100%;          /* Full width of the section */
+  height: 50px;          /* Height of the area the line moves in */
+  overflow: hidden;     /* Hides the line when it goes off-screen */
+  position: relative;
+  background: transparent; 
+}
+
+.sliding-line {
+  width: 500px;         /* Length of the sliding line */
+  height: 100px;          /* Thickness of the line */
+  background: linear-gradient(to right, transparent, #5976c5, transparent); 
+  position: absolute;
+  
+  /* Animation: moves for 5 seconds, starts again immediately */
+  animation: slide-right 5s linear infinite;
+}
+
+@keyframes slide-right {
+  0% {
+    left: -150px;       /* Starts completely off-screen to the left */
+  }
+  100% {
+    left: 100%;         /* Ends completely off-screen to the right */
+  }
+}
